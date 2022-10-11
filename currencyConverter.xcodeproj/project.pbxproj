@@ -13,6 +13,12 @@
 		0D3EEABE28F3711B00664342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EEABC28F3711B00664342 /* Main.storyboard */; };
 		0D3EEAC028F3711C00664342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EEABF28F3711C00664342 /* Assets.xcassets */; };
 		0D3EEAC328F3711C00664342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D3EEAC128F3711C00664342 /* LaunchScreen.storyboard */; };
+		0D3EEAD028F3969400664342 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEACF28F3969400664342 /* ViewModel.swift */; };
+		0D3EEAD228F3970600664342 /* CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEAD128F3970600664342 /* CurrencySymbol.swift */; };
+		0D3EEAD528F48B3F00664342 /* AutocompleteField in Frameworks */ = {isa = PBXBuildFile; productRef = 0D3EEAD428F48B3F00664342 /* AutocompleteField */; };
+		0D3EEAD728F4E24300664342 /* CurrencyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEAD628F4E24300664342 /* CurrencyResult.swift */; };
+		0D3EEADA28F60DAF00664342 /* CurrencyFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 0D3EEAD928F60DAF00664342 /* CurrencyFormatter */; };
+		0D3EEADC28F60DAF00664342 /* CurrencyText in Frameworks */ = {isa = PBXBuildFile; productRef = 0D3EEADB28F60DAF00664342 /* CurrencyText */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,9 @@
 		0D3EEABF28F3711C00664342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D3EEAC228F3711C00664342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D3EEAC428F3711C00664342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D3EEACF28F3969400664342 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0D3EEAD128F3970600664342 /* CurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbol.swift; sourceTree = "<group>"; };
+		0D3EEAD628F4E24300664342 /* CurrencyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3EEADA28F60DAF00664342 /* CurrencyFormatter in Frameworks */,
+				0D3EEAD528F48B3F00664342 /* AutocompleteField in Frameworks */,
+				0D3EEADC28F60DAF00664342 /* CurrencyText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,42 @@
 		0D3EEAB528F3711B00664342 /* currencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				0D3EEACE28F3964200664342 /* Model */,
+				0D3EEACD28F3963A00664342 /* ViewModel */,
+				0D3EEACC28F3963000664342 /* View */,
 				0D3EEAB628F3711B00664342 /* AppDelegate.swift */,
 				0D3EEAB828F3711B00664342 /* SceneDelegate.swift */,
-				0D3EEABA28F3711B00664342 /* ViewController.swift */,
 				0D3EEABC28F3711B00664342 /* Main.storyboard */,
 				0D3EEABF28F3711C00664342 /* Assets.xcassets */,
 				0D3EEAC128F3711C00664342 /* LaunchScreen.storyboard */,
 				0D3EEAC428F3711C00664342 /* Info.plist */,
 			);
 			path = currencyConverter;
+			sourceTree = "<group>";
+		};
+		0D3EEACC28F3963000664342 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D3EEABA28F3711B00664342 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D3EEACD28F3963A00664342 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D3EEACF28F3969400664342 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D3EEACE28F3964200664342 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D3EEAD128F3970600664342 /* CurrencySymbol.swift */,
+				0D3EEAD628F4E24300664342 /* CurrencyResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,11 @@
 			dependencies = (
 			);
 			name = currencyConverter;
+			packageProductDependencies = (
+				0D3EEAD428F48B3F00664342 /* AutocompleteField */,
+				0D3EEAD928F60DAF00664342 /* CurrencyFormatter */,
+				0D3EEADB28F60DAF00664342 /* CurrencyText */,
+			);
 			productName = currencyConverter;
 			productReference = 0D3EEAB328F3711B00664342 /* currencyConverter.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,10 @@
 				Base,
 			);
 			mainGroup = 0D3EEAAA28F3711B00664342;
+			packageReferences = (
+				0D3EEAD328F48B3F00664342 /* XCRemoteSwiftPackageReference "AutocompleteField" */,
+				0D3EEAD828F60DAF00664342 /* XCRemoteSwiftPackageReference "CurrencyText" */,
+			);
 			productRefGroup = 0D3EEAB428F3711B00664342 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3EEAD228F3970600664342 /* CurrencySymbol.swift in Sources */,
+				0D3EEAD728F4E24300664342 /* CurrencyResult.swift in Sources */,
 				0D3EEABB28F3711B00664342 /* ViewController.swift in Sources */,
 				0D3EEAB728F3711B00664342 /* AppDelegate.swift in Sources */,
+				0D3EEAD028F3969400664342 /* ViewModel.swift in Sources */,
 				0D3EEAB928F3711B00664342 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +409,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0D3EEAD328F48B3F00664342 /* XCRemoteSwiftPackageReference "AutocompleteField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/filipstefansson/AutocompleteField.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0D3EEAD828F60DAF00664342 /* XCRemoteSwiftPackageReference "CurrencyText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marinofelipe/CurrencyText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D3EEAD428F48B3F00664342 /* AutocompleteField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D3EEAD328F48B3F00664342 /* XCRemoteSwiftPackageReference "AutocompleteField" */;
+			productName = AutocompleteField;
+		};
+		0D3EEAD928F60DAF00664342 /* CurrencyFormatter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D3EEAD828F60DAF00664342 /* XCRemoteSwiftPackageReference "CurrencyText" */;
+			productName = CurrencyFormatter;
+		};
+		0D3EEADB28F60DAF00664342 /* CurrencyText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D3EEAD828F60DAF00664342 /* XCRemoteSwiftPackageReference "CurrencyText" */;
+			productName = CurrencyText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0D3EEAAB28F3711B00664342 /* Project object */;
 }

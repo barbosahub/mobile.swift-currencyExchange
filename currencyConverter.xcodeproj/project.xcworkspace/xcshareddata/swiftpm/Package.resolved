@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "autocompletefield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/filipstefansson/AutocompleteField.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "04a49217ab0ee5e7f02a3192cf7091a16d0a79ad"
+      }
+    },
+    {
+      "identity" : "currencytext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marinofelipe/CurrencyText.git",
+      "state" : {
+        "revision" : "32c6f6859b9833a35559a6193cb7c34eb08f5f60",
+        "version" : "3.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
